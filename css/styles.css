@@ -8,6 +8,10 @@ section {
     color: #fff;
     font-size: 2rem;
     text-align: center;
+    /* Sections are content width by default(the text and padding inside), 
+    but due to that they do not take up all the space on the row. 
+    Flex grow allows items to grow beyond their content width to take up the extra space when there is space. 
+    Default is flex-grow: 0(no grow), and flex-grow: 1; (yes, grow) */
 }
 
 /* :nth child selectors - selects elements based on their position as a child in any parent element*/
@@ -40,4 +44,20 @@ section:nth-last-child(2) {
 section:only-child {
     background-color: whitesmoke;
     color: darkslategray;
+}
+
+section:nth-child(3) {
+    background-color: khaki;
+    /* flex-grow: 2; */
+    /* this items 4 times of the extra remaining space */
+}
+
+/* by default all flex items are flex-shrink:1 (shrink on) */
+section {
+    /* flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto; */
+    /* flex shorthand: grow shrink basis */
+    /* flex: 1 1 33%; */
+    flex: 1;
 }
